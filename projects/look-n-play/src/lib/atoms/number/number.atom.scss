@@ -1,1 +1,29 @@
-:host { }
+$STEP_BACKGROUND: var(--lnp-text-secondary);
+$VALUE_BACKGROUND: var(--lnp-text-primary);
+$TEXT: var(--lnp-background-primary);
+
+
+
+:host {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+
+.cell {
+  padding: 10px;
+  color: $TEXT;
+
+  &.step {
+    flex-grow: 1;
+    background-color: $STEP_BACKGROUND;
+  }
+
+  &.value {
+    flex-shrink: 1;
+    flex-basis: 100%;
+    overflow: hidden;
+    background-color: $VALUE_BACKGROUND;
+  }
+}
+

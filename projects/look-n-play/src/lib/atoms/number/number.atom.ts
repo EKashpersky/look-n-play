@@ -1,11 +1,10 @@
 import {
-  AfterViewInit,
   Component,
   ElementRef,
   Input,
-  OnChanges,
   Renderer2
 } from '@angular/core';
+
 import { steppedValue } from '../../utils';
 
 
@@ -30,12 +29,9 @@ export class NumberModel {
   styleUrls: ['../../../typography.scss', 'number.atom.scss']
 })
 export class AtomNumberComponent {
-  @Input() public readonly model: NumberModel;
+  @Input() public model: NumberModel;
 
-  public constructor(
-    private _host: ElementRef<HTMLElement>,
-    private _renderer: Renderer2,
-  ) {
+  public constructor() {
     this.model = new NumberModel(0, 0, false);
   }
 }
