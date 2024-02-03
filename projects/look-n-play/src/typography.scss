@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'NotoSansMono';
+  src: url('./assets/Noto_Sans_Mono/NotoSansMono-VariableFont.ttf')
+       format('truetype');
+}
+
+$FONT_FAMILY: 'NotoSansMono';
+@mixin genericFont($SIZE, $WEIGHT) {
+  font-family: $FONT_FAMILY;
+  font-size: $SIZE;
+  font-weight: $WEIGHT;
+}
+
+.regular-plain {
+  @include genericFont(14px, 400);
+}

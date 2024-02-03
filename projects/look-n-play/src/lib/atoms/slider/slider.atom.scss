@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  padding: 5px 15px;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 20px;
+  width: 200px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.range {
+  &.from {
+    left: 0px;
+  }
+
+  &.to {
+    right: 0px;
+  }
+
+  background-color: blue;
+}
+
+.pointer {
+  background: green;
+}
+
+.pointer, .range {
+  bottom: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
